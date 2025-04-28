@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Cloner le projet depuis votre dépôt GitHub après avoir fait un fork :
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone https://github.com/votre-nom/fini.git
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  Installer les dépendances :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+pnpm install
 
-## Learn More
+##  Initialiser votre branche :
 
-To learn more about Next.js, take a look at the following resources:
+git branch -M "nom-de-votre-branche"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Relier ton dépôt local au projet initial
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+git remote add upstream https://github.com/landourenech/fini.git
 
-## Deploy on Vercel
+## Pour voir les routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+git remote -v
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##   Envoyer votre travail vers GitHub :
+
+git add .
+git commit -m "Votre message de commit"
+pnpm build
+git pull origin develop // pour récupérer la branche develop
+git push -u origin "nom-de-votre-branche" // pour envoyer vers votre dépôt
+
+ou, pour envoyer directement vers le dépôt principal :
+
+git push -u upstream develop // pour envoyer au chef de projet
+
+## Notes :
+
+    - Utilise des noms de branches sans espace (ex: feature/ma-fonctionnalite).
+
+    - Sois clair dans tes messages de commit (ex: feat: ajout de la page d'accueil).
+
+    - Si tu travailles avec un dépôt principal (upstream) en plus de ton fork (origin), assure-toi d'avoir bien configuré ton remote upstream.
